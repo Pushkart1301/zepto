@@ -84,9 +84,9 @@ export default function Layout() {
         <div className="border-t border-white/10 p-2">
           {!collapsed && (
             <div className="flex items-center gap-2 px-2 py-2 rounded-md hover:bg-white/10 cursor-pointer mb-1">
-              <div className="w-7 h-7 rounded-full bg-[#7C3AED] flex items-center justify-center text-xs font-semibold flex-shrink-0">AM</div>
+              <div className="w-7 h-7 rounded-full bg-[#7C3AED] flex items-center justify-center text-xs font-semibold flex-shrink-0">PT</div>
               <div className="flex-1 min-w-0">
-                <div className="text-white text-[12px] font-medium truncate">Aarav Mehta</div>
+                <div className="text-white text-[12px] font-medium truncate">Pushkar Toshniwal</div>
                 <div className="text-gray-400 text-[11px] truncate">Senior Agent</div>
               </div>
               <div className="w-2 h-2 rounded-full bg-green-400 flex-shrink-0" title="Online" />
@@ -94,7 +94,7 @@ export default function Layout() {
           )}
           {collapsed && (
             <div className="flex justify-center py-1 mb-1">
-              <div className="w-7 h-7 rounded-full bg-[#7C3AED] flex items-center justify-center text-xs font-semibold">AM</div>
+              <div className="w-7 h-7 rounded-full bg-[#7C3AED] flex items-center justify-center text-xs font-semibold">PT</div>
             </div>
           )}
           <button
@@ -199,14 +199,14 @@ export default function Layout() {
               onClick={() => setProfileOpen(!profileOpen)}
               className="flex items-center gap-2 px-2 py-1.5 hover:bg-gray-100 rounded-md transition-all"
             >
-              <div className="w-7 h-7 rounded-full bg-[#7C3AED] flex items-center justify-center text-xs font-semibold text-white">AM</div>
+              <div className="w-7 h-7 rounded-full bg-[#7C3AED] flex items-center justify-center text-xs font-semibold text-white">PT</div>
               <ChevronDown size={13} className="text-gray-400" />
             </button>
             {profileOpen && (
               <div className="absolute right-0 top-full mt-1 w-[200px] bg-white border border-gray-200 rounded-lg shadow-xl z-50 py-1">
                 <div className="px-4 py-3 border-b border-gray-100">
-                  <div className="text-[13px] font-semibold text-gray-800">Aarav Mehta</div>
-                  <div className="text-[11px] text-gray-500">aarav.mehta@zepto.com</div>
+                  <div className="text-[13px] font-semibold text-gray-800">Pushkar Toshniwal</div>
+                  <div className="text-[11px] text-gray-500">pushkar@zepto.com</div>
                 </div>
                 <button
                   onClick={() => { navigate('/settings'); setProfileOpen(false); }}
