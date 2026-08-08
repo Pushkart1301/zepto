@@ -1,22 +1,31 @@
-import { Ticket } from "../types/ticket";
+import { PipelineTicket, AIOutput } from "../types/ticket";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 
-export async function getTickets(): Promise<Ticket[]> {
+// Fetch all processed tickets from pipeline output
+export async function getTickets(): Promise<PipelineTicket[]> {
   const res = await fetch(`${API_URL}/tickets/`);
+  if (!res.ok) throw new Error("Failed to fetch tickets");
   return res.json();
 }
 
-export async function getTicket(id: string): Promise<Ticket> {
-  const res = await fetch(`${API_URL}/tickets/${id}`);
+// Fetch single ticket by ID
+export async function getTicket(ticketId: string): Promise<PipelineTicket> {
+  const res = await fetch(`${API_URL}/tickets/${ticketId}`);
+  if (!res.ok) throw new Error(`Ticket ${ticketId} not found`);
   return res.json();
 }
 
-export async function createTicket(ticket: Omit<Ticket, "id">): Promise<Ticket> {
-  const res = await fetch(`${API_URL}/tickets/`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(ticket),
-  });
+// Get AI response for a ticket (explanation + customer reply)
+export async function getAIResponse(ticketId: string): Promise<AIOutput> {
+  const res = await fetch(`${API_URL}/tickets/${ticketId}/ai`);
+  if (!res.ok) throw new Error("Failed to get AI response");
+  return res.json();
+}
+
+// Dashboard stats endpoint
+export async function getDashboardStats() {
+  const res = await fetch(`${API_URL}/dashboard/stats`);
+  if (!res.ok) throw new Error("Failed to fetch stats");
   return res.json();
 }

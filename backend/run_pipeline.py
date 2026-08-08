@@ -26,8 +26,8 @@ from app.services.data_loader import load_new_tickets
 
 def main():
     new_tickets = load_new_tickets()
-    # Test on first 10 real tickets
-    ticket_ids = new_tickets["ticket_id"].tolist()[:10]
+    # Process all tickets
+    ticket_ids = new_tickets["ticket_id"].tolist()
 
     print("=" * 70)
     print(f"ZEPTO TICKET INTELLIGENCE PIPELINE  —  {len(ticket_ids)} tickets")

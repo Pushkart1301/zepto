@@ -144,12 +144,28 @@ def process_ticket(ticket_id: str) -> dict:
         )
 
     # ── All checks passed → AUTO_RESOLVE ─────────────────────────────────────
+    # Build an explainable reason from the confidence components
+    top_sim   = max(p.similarity for p in precedents)
+    avg_sim   = round(sum(p.similarity for p in precedents) / len(precedents), 4)
+    actions   = [p.action for p in precedents]
+    consensus = round(actions.count(proposed_action) / len(actions), 2)
+    csat_vals = [p.csat for p in precedents if p.csat is not None]
+    avg_csat  = round(sum(csat_vals) / len(csat_vals), 1) if csat_vals else None
+
+    reason_code = (
+        f"STRONG_EVIDENCE: "
+        f"{len(precedents)} similar cases matched "
+        f"(top similarity {round(top_sim * 100)}%, avg {round(avg_sim * 100)}%), "
+        f"action consensus {round(consensus * 100)}% on '{proposed_action}'"
+        + (f", avg CSAT {avg_csat}/5" if avg_csat else "")
+    )
+
     return _build_result(
         ticket_payload=ticket_payload,
         status=DecisionStatus.AUTO_RESOLVE,
         confidence=conf_result.score,
         action=proposed_action,
-        reason_code="STRONG_EVIDENCE",
+        reason_code=reason_code,
         order_data=policy.order_data,
         precedents=_serialize_precedents(precedents),
     )
