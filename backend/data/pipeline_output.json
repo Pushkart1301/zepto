@@ -1,0 +1,432 @@
+[
+  {
+    "ticket": {
+      "ticket_id": "N-000",
+      "description": "fruits were rotten",
+      "order_id": "ORD-9900"
+    },
+    "decision": {
+      "status": "HUMAN_REVIEW",
+      "confidence": 0.7969,
+      "action": "full_refund",
+      "reason_code": "POLICY_VIOLATION: ORDER_NOT_DELIVERED: action=full_refund requires delivery_status=delivered, got=cancelled"
+    },
+    "order": {
+      "order_id": "ORD-9900",
+      "items": 1,
+      "value_inr": 999,
+      "delivery_time_min": 24,
+      "delivery_status": "cancelled"
+    },
+    "precedents": [
+      {
+        "ticket_id": "H-1275",
+        "similarity": 0.8737,
+        "action": "full_refund",
+        "resolution_note": "refunded order",
+        "csat": 5.0
+      },
+      {
+        "ticket_id": "H-1008",
+        "similarity": 0.8737,
+        "action": "full_refund",
+        "resolution_note": "refunded order",
+        "csat": 3.0
+      },
+      {
+        "ticket_id": "H-1033",
+        "similarity": 0.8737,
+        "action": "partial_refund",
+        "resolution_note": "refunded item",
+        "csat": 4.0
+      }
+    ]
+  },
+  {
+    "ticket": {
+      "ticket_id": "N-001",
+      "description": "wrong brand of rice delivered",
+      "order_id": "ORD-9901"
+    },
+    "decision": {
+      "status": "HUMAN_REVIEW",
+      "confidence": 0.9453,
+      "action": "redelivery",
+      "reason_code": "POLICY_VIOLATION: ORDER_NOT_DELIVERED: action=redelivery requires delivery_status=delivered, got=cancelled"
+    },
+    "order": {
+      "order_id": "ORD-9901",
+      "items": 2,
+      "value_inr": 189,
+      "delivery_time_min": 28,
+      "delivery_status": "cancelled"
+    },
+    "precedents": [
+      {
+        "ticket_id": "H-1042",
+        "similarity": 0.9173,
+        "action": "redelivery",
+        "resolution_note": "correct item dispatched",
+        "csat": 4.0
+      },
+      {
+        "ticket_id": "H-1044",
+        "similarity": 0.9173,
+        "action": "redelivery",
+        "resolution_note": "correct item dispatched",
+        "csat": 5.0
+      },
+      {
+        "ticket_id": "H-1262",
+        "similarity": 0.9173,
+        "action": "redelivery",
+        "resolution_note": "correct item dispatched",
+        "csat": 5.0
+      }
+    ]
+  },
+  {
+    "ticket": {
+      "ticket_id": "N-002",
+      "description": "milk packet missing from my order",
+      "order_id": "ORD-9902"
+    },
+    "decision": {
+      "status": "HUMAN_REVIEW",
+      "confidence": 0.9262,
+      "action": "redelivery",
+      "reason_code": "POLICY_VIOLATION: ORDER_NOT_DELIVERED: action=redelivery requires delivery_status=delivered, got=cancelled"
+    },
+    "order": {
+      "order_id": "ORD-9902",
+      "items": 5,
+      "value_inr": 999,
+      "delivery_time_min": 42,
+      "delivery_status": "cancelled"
+    },
+    "precedents": [
+      {
+        "ticket_id": "H-1000",
+        "similarity": 0.9323,
+        "action": "redelivery",
+        "resolution_note": "missing item re-sent",
+        "csat": 5.0
+      },
+      {
+        "ticket_id": "H-1173",
+        "similarity": 0.9323,
+        "action": "redelivery",
+        "resolution_note": "missing item re-sent",
+        "csat": 4.0
+      },
+      {
+        "ticket_id": "H-1152",
+        "similarity": 0.9323,
+        "action": "redelivery",
+        "resolution_note": "missing item re-sent",
+        "csat": 3.0
+      }
+    ]
+  },
+  {
+    "ticket": {
+      "ticket_id": "N-003",
+      "description": "got salted butter instead of unsalted",
+      "order_id": "ORD-9903"
+    },
+    "decision": {
+      "status": "HUMAN_REVIEW",
+      "confidence": 0.8525,
+      "action": "partial_refund",
+      "reason_code": "POLICY_VIOLATION: ORDER_NOT_DELIVERED: action=partial_refund requires delivery_status=delivered, got=cancelled"
+    },
+    "order": {
+      "order_id": "ORD-9903",
+      "items": 3,
+      "value_inr": 999,
+      "delivery_time_min": 53,
+      "delivery_status": "cancelled"
+    },
+    "precedents": [
+      {
+        "ticket_id": "H-1005",
+        "similarity": 0.9317,
+        "action": "redelivery",
+        "resolution_note": "correct item dispatched",
+        "csat": 5.0
+      },
+      {
+        "ticket_id": "H-1066",
+        "similarity": 0.9317,
+        "action": "partial_refund",
+        "resolution_note": "refunded difference",
+        "csat": 5.0
+      },
+      {
+        "ticket_id": "H-1063",
+        "similarity": 0.9317,
+        "action": "partial_refund",
+        "resolution_note": "refunded difference",
+        "csat": 4.0
+      }
+    ]
+  },
+  {
+    "ticket": {
+      "ticket_id": "N-004",
+      "description": "eggs broken in package",
+      "order_id": "ORD-9904"
+    },
+    "decision": {
+      "status": "HUMAN_REVIEW",
+      "confidence": 0.7962,
+      "action": "full_refund",
+      "reason_code": "POLICY_VIOLATION: ORDER_NOT_DELIVERED: action=full_refund requires delivery_status=delivered, got=cancelled"
+    },
+    "order": {
+      "order_id": "ORD-9904",
+      "items": 6,
+      "value_inr": 189,
+      "delivery_time_min": 14,
+      "delivery_status": "cancelled"
+    },
+    "precedents": [
+      {
+        "ticket_id": "H-1003",
+        "similarity": 0.8991,
+        "action": "full_refund",
+        "resolution_note": "refunded order",
+        "csat": 3.0
+      },
+      {
+        "ticket_id": "H-1004",
+        "similarity": 0.8991,
+        "action": "full_refund",
+        "resolution_note": "refunded order",
+        "csat": 4.0
+      },
+      {
+        "ticket_id": "H-1028",
+        "similarity": 0.8991,
+        "action": "partial_refund",
+        "resolution_note": "refunded item",
+        "csat": 4.0
+      }
+    ]
+  },
+  {
+    "ticket": {
+      "ticket_id": "N-005",
+      "description": "milk packet missing from my order",
+      "order_id": "ORD-9905"
+    },
+    "decision": {
+      "status": "AUTO_RESOLVE",
+      "confidence": 0.9262,
+      "action": "redelivery",
+      "reason_code": "STRONG_EVIDENCE"
+    },
+    "order": {
+      "order_id": "ORD-9905",
+      "items": 1,
+      "value_inr": 412,
+      "delivery_time_min": 41,
+      "delivery_status": "delivered"
+    },
+    "precedents": [
+      {
+        "ticket_id": "H-1000",
+        "similarity": 0.9323,
+        "action": "redelivery",
+        "resolution_note": "missing item re-sent",
+        "csat": 5.0
+      },
+      {
+        "ticket_id": "H-1173",
+        "similarity": 0.9323,
+        "action": "redelivery",
+        "resolution_note": "missing item re-sent",
+        "csat": 4.0
+      },
+      {
+        "ticket_id": "H-1152",
+        "similarity": 0.9323,
+        "action": "redelivery",
+        "resolution_note": "missing item re-sent",
+        "csat": 3.0
+      }
+    ]
+  },
+  {
+    "ticket": {
+      "ticket_id": "N-006",
+      "description": "still waiting after 30 min",
+      "order_id": "ORD-9906"
+    },
+    "decision": {
+      "status": "AUTO_RESOLVE",
+      "confidence": 0.8473,
+      "action": "coupon",
+      "reason_code": "STRONG_EVIDENCE"
+    },
+    "order": {
+      "order_id": "ORD-9906",
+      "items": 1,
+      "value_inr": 189,
+      "delivery_time_min": 35,
+      "delivery_status": "cancelled"
+    },
+    "precedents": [
+      {
+        "ticket_id": "H-1225",
+        "similarity": 0.9212,
+        "action": "coupon",
+        "resolution_note": "issued \u20b950 coupon",
+        "csat": 4.0
+      },
+      {
+        "ticket_id": "H-1187",
+        "similarity": 0.9212,
+        "action": "apology_no_action",
+        "resolution_note": "SLA breach < threshold",
+        "csat": 5.0
+      },
+      {
+        "ticket_id": "H-1103",
+        "similarity": 0.9212,
+        "action": "coupon",
+        "resolution_note": "issued \u20b950 coupon",
+        "csat": 5.0
+      }
+    ]
+  },
+  {
+    "ticket": {
+      "ticket_id": "N-007",
+      "description": "delivery way past promised time",
+      "order_id": "ORD-9907"
+    },
+    "decision": {
+      "status": "AUTO_RESOLVE",
+      "confidence": 0.8203,
+      "action": "apology_no_action",
+      "reason_code": "STRONG_EVIDENCE"
+    },
+    "order": {
+      "order_id": "ORD-9907",
+      "items": 4,
+      "value_inr": 412,
+      "delivery_time_min": 55,
+      "delivery_status": "cancelled"
+    },
+    "precedents": [
+      {
+        "ticket_id": "H-1041",
+        "similarity": 0.9206,
+        "action": "apology_no_action",
+        "resolution_note": "SLA breach < threshold",
+        "csat": 5.0
+      },
+      {
+        "ticket_id": "H-1099",
+        "similarity": 0.9206,
+        "action": "coupon",
+        "resolution_note": "issued \u20b950 coupon",
+        "csat": 4.0
+      },
+      {
+        "ticket_id": "H-1076",
+        "similarity": 0.9206,
+        "action": "apology_no_action",
+        "resolution_note": "SLA breach < threshold",
+        "csat": 3.0
+      }
+    ]
+  },
+  {
+    "ticket": {
+      "ticket_id": "N-008",
+      "description": "money not back for cancelled order",
+      "order_id": "ORD-9908"
+    },
+    "decision": {
+      "status": "AUTO_RESOLVE",
+      "confidence": 0.8539,
+      "action": "refund_reissue",
+      "reason_code": "STRONG_EVIDENCE"
+    },
+    "order": {
+      "order_id": "ORD-9908",
+      "items": 1,
+      "value_inr": 999,
+      "delivery_time_min": 26,
+      "delivery_status": "delivered"
+    },
+    "precedents": [
+      {
+        "ticket_id": "H-1090",
+        "similarity": 0.9345,
+        "action": "refund_reissue",
+        "resolution_note": "refund re-triggered",
+        "csat": 5.0
+      },
+      {
+        "ticket_id": "H-1094",
+        "similarity": 0.9345,
+        "action": "escalation",
+        "resolution_note": "sent to payments team",
+        "csat": 5.0
+      },
+      {
+        "ticket_id": "H-1070",
+        "similarity": 0.9345,
+        "action": "refund_reissue",
+        "resolution_note": "refund re-triggered",
+        "csat": 4.0
+      }
+    ]
+  },
+  {
+    "ticket": {
+      "ticket_id": "N-009",
+      "description": "eggs broken in package",
+      "order_id": "ORD-9909"
+    },
+    "decision": {
+      "status": "AUTO_RESOLVE",
+      "confidence": 0.7962,
+      "action": "full_refund",
+      "reason_code": "STRONG_EVIDENCE"
+    },
+    "order": {
+      "order_id": "ORD-9909",
+      "items": 3,
+      "value_inr": 1450,
+      "delivery_time_min": 49,
+      "delivery_status": "delivered"
+    },
+    "precedents": [
+      {
+        "ticket_id": "H-1003",
+        "similarity": 0.8991,
+        "action": "full_refund",
+        "resolution_note": "refunded order",
+        "csat": 3.0
+      },
+      {
+        "ticket_id": "H-1004",
+        "similarity": 0.8991,
+        "action": "full_refund",
+        "resolution_note": "refunded order",
+        "csat": 4.0
+      },
+      {
+        "ticket_id": "H-1028",
+        "similarity": 0.8991,
+        "action": "partial_refund",
+        "resolution_note": "refunded item",
+        "csat": 4.0
+      }
+    ]
+  }
+]
