@@ -1,5 +1,6 @@
 import { PipelineTicket } from "../types/ticket";
-import pipelineData from "./pipeline_output.json";
 
-// All 30 tickets from the real AI pipeline output
-export const mockTickets: PipelineTicket[] = pipelineData as PipelineTicket[];
+// Fallback: empty array
+// The frontend fetches all 30 tickets from the live Render backend API
+// If the API is unreachable, this empty array triggers the fallback warning in App.tsx
+export const mockTickets: PipelineTicket[] = [];
