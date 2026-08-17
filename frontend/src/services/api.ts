@@ -1,6 +1,6 @@
 import { PipelineTicket, AIOutput } from "../types/ticket";
 
-const API_URL = import.meta.env.VITE_API_URL || "https://zepto-backend.onrender.com/api";
+const API_URL = import.meta.env.VITE_API_URL || "https://zepto-0d5q.onrender.com/api";
 
 // Fetch all processed tickets from pipeline output
 export async function getTickets(): Promise<PipelineTicket[]> {
